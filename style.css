@@ -11,7 +11,6 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-
     margin: 100px auto;
     margin-bottom: 20px;
     width: 1600px;
@@ -40,6 +39,7 @@ body {
 .big-photo {
     align-self: center;
     height: 600px;
+    width: 1060px;
 }
 
 .description {
@@ -47,7 +47,6 @@ body {
     bottom: 0px;
     align-self: flex-end;
     width: 960px;
-
     height: 150px;
     padding-left: 50px;
     padding-right: 50px;
