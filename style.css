@@ -75,10 +75,11 @@ p {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     /* border: 1px solid #ddd; */
     /* background-color: red; */
     border: 5px double white;
+    /* border: 5px double black; */
     border-radius: 3px;
     padding: 5px;
     width: 150px;
@@ -94,6 +95,24 @@ p {
 
 .thumbnail img {
     width: 150px;
+    height: 100px;
+}
+
+.triangle-up {
+    display: none;
+    position: absolute;
+    top: -35px;
+    /* color: red; */
+    height: 50px;
+    filter: contrast(40%);
+    /* filter: brightness(0); */
+    /* filter: saturate(0%); */
+    /* width: 50px; */
+
+    /* align-self: center; */
+    /* right: 20px; */
+    /* transform: rotate(-0.5turn); */
+    /* cursor: pointer; */
 }
 
 .thumbnail-title {
@@ -102,7 +121,7 @@ p {
     inline-size: 130px;
 
     position: absolute;
-    bottom: 120px;
+    bottom: 115px;
     width: 140px;
     /* height: 50px; */
     /* align-self: auto; */
@@ -121,7 +140,7 @@ p {
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    
+
     /* top: -50px; */
 }
 

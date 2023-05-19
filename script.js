@@ -96,8 +96,8 @@ let numberOfPhotos = 17;
 let lastlySeenPhoto = 0;
 
 imagesData.forEach((element) => {
-    $('.thumbnail-container').append('<div class="thumbnail"> <img src="' + element.photo + '" alt="' + element.title + '"' + 'data-number="' + imagesData.indexOf(element) + '">' 
-    + '<div class="thumbnail-title">' + element.title + '</div></div>');
+    $('.thumbnail-container').append('<div class="thumbnail"> <img src="' + element.photo + '" alt="' + element.title + '"' + 'data-number="' + imagesData.indexOf(element) + '">'
+        + '<div class="thumbnail-title">' + element.title + '</div><img src="triangle_up.svg" class="triangle-up"></div>');
 });
 
 $('.thumbnail-container').on('click', '.thumbnail', (event) => {
@@ -110,11 +110,13 @@ function loadPhoto(photoNumber) {
     $('#photo').attr('alt', imagesData[photoNumber].title);
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-description').text(imagesData[photoNumber].description);
-    if (photoNumber !== lastlySeenPhoto) {
-        $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', '5px double white');
-        // $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', '5px double white');
-    };
+    // if (photoNumber !== lastlySeenPhoto) {
+    //     $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', '5px double white');
+    //     // $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', '5px double white');
+    // };
     $('.thumbnail[data-number="' + photoNumber + '"]').css('border', '5px double black');
+    $('.thumbnail[data-number="' + photoNumber + '"]').append("<p>blalblajdklkj</p>");
+    console.log($('.thumbnail[data-number="' + photoNumber + '"]'));
     lastlySeenPhoto = photoNumber;
     // $('.thumbnail.00').css('border', '5px double black');
     // event.target.parentNode.style = 'text-decoration: line-through';
