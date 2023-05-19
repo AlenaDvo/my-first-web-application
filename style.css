@@ -1,0 +1,135 @@
+html {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(210, 203, 203);
+    font-family: 'PT Serif', serif;
+}
+
+.photo-viewer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    margin: 100px auto;
+    margin-bottom: 20px;
+    width: 1600px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 4px grey;
+}
+
+.left-arrow {
+    position: absolute;
+    width: 30px;
+    align-self: center;
+    left: 20px;
+    cursor: pointer;
+}
+
+.right-arrow {
+    position: absolute;
+    width: 30px;
+    align-self: center;
+    right: 20px;
+    transform: rotate(0.5turn);
+    cursor: pointer;
+}
+
+.big-photo {
+    align-self: center;
+    height: 600px;
+}
+
+.description {
+    position: absolute;
+    bottom: 0px;
+    align-self: flex-end;
+    width: 960px;
+
+    height: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+
+    color: white;
+    background-color: rgba(24, 24, 24, 0.6);
+}
+
+p {
+    font-size: large;
+    text-align: justify;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    width: auto;
+    /* background-color: blue; */
+}
+
+.thumbnail {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid #ddd; */
+    /* background-color: red; */
+    border: 5px double white;
+    border-radius: 3px;
+    padding: 5px;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0px 10px 10px 0px grey;
+
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* justify-content: center; */
+}
+
+.thumbnail img {
+    width: 150px;
+}
+
+.thumbnail-title {
+    display: none;
+
+    inline-size: 130px;
+
+    position: absolute;
+    bottom: 120px;
+    width: 140px;
+    /* height: 50px; */
+    /* align-self: auto; */
+    /* text-align: justify; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-top: 10px; */
+
+    background: rgb(99, 98, 98);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    /* padding: 2px; */
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    /* top: -50px; */
+}
+
+.thumbnail:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 140, 186, 0.5);
+    cursor: pointer;
+}
+
+.thumbnail:hover .thumbnail-title {
+    display: block;
+}

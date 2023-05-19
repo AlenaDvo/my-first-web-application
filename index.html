@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="photo-viewer">
+            <img class="left-arrow" src="arrow.svg" alt="previous">
+            <img class="right-arrow" src="arrow.svg" alt="next">
+
+            <img class="big-photo" id='photo'>
+
+            <div class="description">
+                <h1 id="photo-title"></h1>
+                <p id="photo-description"></p>
+            </div>
+        </div>
+        <div class="thumbnail-container">
+            <!-- <img class="thumbnail" id="thumb" src="photos/photo01.jpg">
+            <img class="thumbnail" src="photos/photo02.jpg">
+            <img class="thumbnail" src="photos/photo03.jpg">
+            <img class="thumbnail" src="photos/photo03.jpg"> -->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
