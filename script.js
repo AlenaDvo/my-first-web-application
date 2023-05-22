@@ -101,8 +101,6 @@ imagesData.forEach((element) => {
 });
 
 $('.thumbnail-container').on('click', '.thumbnail', (event) => {
-    // console.log(event.currentTarget);
-    // console.log(event);
     currentPhoto = parseInt($(event.currentTarget).attr('data-number'));
     loadPhoto(currentPhoto);
 });
@@ -114,19 +112,20 @@ function loadPhoto(photoNumber) {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-description').text(imagesData[photoNumber].description);
     if (photoNumber !== lastlySeenPhoto) {
-        // $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', 'red');
         $('.thumbnail[data-number="' + lastlySeenPhoto + '"]').css('border', '5px double white');
+        $($('.thumbnail[data-number="' + lastlySeenPhoto + '"]')).find('> img.triangle-up').css('display', 'none');
     };
     $('.thumbnail[data-number="' + photoNumber + '"]').css('border', '5px double black');
-    // $('.thumbnail[data-number="' + photoNumber + '"]').append("<p>blalblajdklkj</p>");
-    // console.log($('.thumbnail[data-number="' + photoNumber + '"]'));
+
+    // let what = $('.thumbnail[data-number="' + photoNumber + '"]');
+    // let what2 = $(what).find('> img.triangle-up')
+
+    // // console.log(what);
+    // console.log(what2);
+    
+    $($('.thumbnail[data-number="' + photoNumber + '"]')).find('> img.triangle-up').css('display', 'block');
     lastlySeenPhoto = photoNumber;
-    // $('.thumbnail.00').css('border', '5px double black');
-    // event.target.parentNode.style = 'text-decoration: line-through';
-    // imagesData[photoNumber].description);
 };
-// $('[data-number]').thumbnail.css =;
-// $('.thumbnail').[0].css('border', '5px double black');
 
 loadPhoto(currentPhoto);
 
@@ -149,14 +148,3 @@ $('.left-arrow').click(() => {
         loadPhoto(currentPhoto);
     };
 });
-
-// function loadThumbnail(photo) {
-
-//     // $('.thumbnail').attr('src', imagesData[photoNumber].photo);
-//     // $('#photo-title').text(imagesData[photoNumber].title);
-//     // $('.thumbnail').attr('alt', imagesData[photoNumber].title);
-//     // $('#photo-description').text(imagesData[photoNumber].description);
-// };
-
-// $('.thumbnail-container').append('<img class="thumbnail">');
-// loadThumbnail(0);
